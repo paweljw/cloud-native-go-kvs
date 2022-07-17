@@ -1,7 +1,9 @@
 package main
 
-import "log"
+import (
+	"github.com/paweljw/cloud-native-go-kvs/pkg/rest"
+)
 
 func main() {
-	log.Println("Hello, World!")
+	rest.StartRestService()
 }
