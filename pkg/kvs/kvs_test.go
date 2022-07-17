@@ -7,7 +7,7 @@ func TestPutGetDel(t *testing.T) {
 	err := Put("test", "result")
 	assert.Nil(t, err)
 
-	result, ok := store["test"]
+	result, ok := store.m["test"]
 	assert.Equal(t, "result", result)
 	assert.True(t, ok)
 
@@ -18,7 +18,7 @@ func TestPutGetDel(t *testing.T) {
 	err = Del("test")
 	assert.Nil(t, err)
 
-	result, ok = store["test"]
+	result, ok = store.m["test"]
 	assert.Equal(t, "", result)
 	assert.False(t, ok)
 
